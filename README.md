@@ -1,6 +1,6 @@
 # Wildsearcher
 
-Search for records by specifying fields and a search term.
+Search for records in rails controller or model by specifying fields and a search term.
 
 ## Installation
 
@@ -20,7 +20,16 @@ Or install it yourself as:
 
 ## Usage
 
-For a model `Car(id: integer, year: integer, make: string)`, you can call `Car.search_on_fields(search_fields: [year, id], search_term: "20")` and it will return expected records.
+##### `wildsearcher(params)`
+
+For your rails application, make your url look like `http://some.car_website.com?search_fields=year,make,vin&search_term=fancy ford`.
+
+This will populate `search_term` and `search_fields` in your controller params. Now, filter your records in `index` action or wherever by calling `Car.wildsearcher(params)`. That's it!
+
+
+##### `filter_records`
+
+If you are looking for filtering records for a model `Car(id: integer, year: integer, make: string, vin: string)`, you can call `Car.filter_records(search_fields: [year, vin], search_term: "20")` and it will return expected records.
 
 ## Development
 

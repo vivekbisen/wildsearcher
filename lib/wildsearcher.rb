@@ -1,8 +1,14 @@
 require "wildsearcher/version"
-require "wildsearcher/active_record"
+require "active_record"
 
 module Wildsearcher
-  def search_on_fields(search_fields: [], search_term: "")
+  def wildsearcher(params = {})
+    field_array = params[:search_fields].to_s.split(",")
+    term = params[:search_term].to_s.strip
+    filter_records(search_fields: field_array, search_term: term)
+  end
+
+  def filter_records(search_fields: [], search_term: "")
     return default_scope if search_fields.empty? || search_term.blank?
     where(conditions(filter_fields(search_fields), search_term))
   end
@@ -19,10 +25,20 @@ module Wildsearcher
   end
 
   private def default_scope
-    raise NotImplementedError
+    ::ActiveRecord::VERSION::MAJOR >= 4 ? all : scoped
   end
 
   private def db_like
-    raise NotImplementedError
+    case ::ActiveRecord::Base.connection.class.name.demodulize
+    when "PostgreSQLAdapter"
+      "ILIKE"
+    when "MysqlAdapter"
+      "LIKE"
+    else
+      raise NotImplementedError.new("Wildsearcher currently supports only Mysql and Postgresql.")
+    end
   end
+
 end
+
+::ActiveRecord::Base.extend(Wildsearcher)
