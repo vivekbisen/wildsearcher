@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/vivekbisen/wildsearcher.svg)](https://travis-ci.org/vivekbisen/wildsearcher)
+[![Gem Version](https://img.shields.io/gem/v/wildsearcher.svg)](https://rubygems.org/gems/wildsearcher)
+[![Gem Downloads](https://img.shields.io/gem/dt/wildsearcher.svg)](https://rubygems.org/gems/wildsearcher) 
+
 # Wildsearcher
 
 Search for records in rails controller or model by specifying fields and a search term.
