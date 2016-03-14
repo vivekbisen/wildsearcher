@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/vivekbisen/wildsearcher.svg)](https://travis-ci.org/vivekbisen/wildsearcher)
+[![Code Climate](https://codeclimate.com/github/vivekbisen/wildsearcher/badges/gpa.svg)](https://codeclimate.com/github/vivekbisen/wildsearcher)
 [![Gem Version](https://img.shields.io/gem/v/wildsearcher.svg)](https://rubygems.org/gems/wildsearcher)
 [![Gem Downloads](https://img.shields.io/gem/dt/wildsearcher.svg)](https://rubygems.org/gems/wildsearcher) 
 
