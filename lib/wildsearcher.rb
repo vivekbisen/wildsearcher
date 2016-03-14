@@ -21,7 +21,7 @@ module Wildsearcher
 
   private def conditions(fields, term)
     term = "%" + term.strip + "%" if db_like == "ILIKE"
-    [fields.map { |f| "#{f} #{db_like} ?" }.join(" OR ")] + ([term] * fields.count)
+    [fields.map { |f| "cast(#{f} as text) #{db_like} ?" }.join(" OR ")] + ([term] * fields.count)
   end
 
   private def default_scope
