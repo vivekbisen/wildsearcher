@@ -23,10 +23,10 @@ Gem::Specification.new do |spec|
   end
 
   spec.add_development_dependency "bundler", "~> 1.11"
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "rake", "~> 11.1"
+  spec.add_development_dependency "rspec", "~> 3.4"
 
-  spec.add_dependency "activerecord", "~> 4.0"
+  spec.add_dependency "activerecord", "~> 4.2"
 
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
