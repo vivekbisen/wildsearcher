@@ -1,6 +1,7 @@
-[![Build Status](https://travis-ci.org/vivekbisen/wildsearcher.svg)](https://travis-ci.org/vivekbisen/wildsearcher)
-[![Code Climate](https://codeclimate.com/github/vivekbisen/wildsearcher/badges/gpa.svg)](https://codeclimate.com/github/vivekbisen/wildsearcher)
 [![Gem Version](https://badge.fury.io/rb/wildsearcher.svg)](https://badge.fury.io/rb/wildsearcher)
+[![Code Climate](https://codeclimate.com/github/vivekbisen/wildsearcher/badges/gpa.svg)](https://codeclimate.com/github/vivekbisen/wildsearcher)
+[![Build Status](https://travis-ci.org/vivekbisen/wildsearcher.svg)](https://travis-ci.org/vivekbisen/wildsearcher)
+[![Dependency Status](https://gemnasium.com/vivekbisen/wildsearcher.svg)](https://gemnasium.com/vivekbisen/wildsearcher)
 [![Gem Downloads](https://img.shields.io/gem/dt/wildsearcher.svg)](https://rubygems.org/gems/wildsearcher) 
 
 # Wildsearcher
