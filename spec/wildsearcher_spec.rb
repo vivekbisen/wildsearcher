@@ -3,7 +3,7 @@ require "spec_helper"
 describe Wildsearcher do
   context "version" do
     subject { Wildsearcher::VERSION }
-    it { is_expected.to eq "1.0.1" }
+    it { is_expected.to eq "1.0.2" }
   end
 
 =begin
