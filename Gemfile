@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem "activerecord", "~> 4.2"
+gem "activerecord", ">= 3.0"
 
 group :development do
   gem 'guard-rspec', require: false
