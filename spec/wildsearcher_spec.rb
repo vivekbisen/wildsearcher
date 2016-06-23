@@ -1,11 +1,6 @@
 require "spec_helper"
 
 describe Wildsearcher do
-  context "version" do
-    subject { Wildsearcher::VERSION }
-    it { is_expected.to eq "1.0.2" }
-  end
-
 =begin
   context "filter_records" do
     let(:car_1) { Car.new(id: 1, year: 2009, make: "VW") }
