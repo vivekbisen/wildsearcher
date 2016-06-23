@@ -12,7 +12,7 @@ module Wildsearcher
   end
 
   def filter_records(search_fields: [], search_term: "")
-    return default_scope if search_fields.empty? || search_term.blank?
+    return version_specific_scoped if search_fields.empty? || search_term.blank?
     check_missing_associations(search_fields)
     where(conditions(filter_fields(search_fields), search_term))
   end
@@ -23,8 +23,8 @@ module Wildsearcher
   end
 
   private def conditions(fields, term)
-    term = "%" + term.strip + "%" if db_like == "ILIKE"
-    [fields.map { |f| "CAST(#{f} AS TEXT) #{db_like} ?" }.join(" OR ")] + ([term] * fields.count)
+    term = "%" + term.strip + "%"
+    [fields.map { |f| "CAST(#{f} as CHAR(50)) #{db_like} ?" }.join(" OR ")] + ([term] * fields.count)
   end
 
   private def joined_model_columns(search_fields)
