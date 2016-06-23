@@ -6,7 +6,7 @@ require 'wildsearcher/version'
 Gem::Specification.new do |spec|
   spec.name          = "wildsearcher"
   spec.description   = "Filter your records for your rails app with one line change."
-  spec.version       = Wildsearcher::VERSION
+  spec.version       = "1.0.5"
   spec.authors       = ["Vivek Bisen"]
   spec.email         = ["vivek@luther.edu"]
 
